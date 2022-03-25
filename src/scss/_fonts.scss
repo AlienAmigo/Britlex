@@ -1,9 +1,21 @@
-//@font-face {
-//  font-family: Montserrat;
-//  src:
-//    url('') format('woff2'),
-//    url('') format('woff');
-//  font-weight: 300;
-//  font-style: normal;
-//  font-display: block;
-//}
+@font-face {
+  font-family: Poppins;
+  src:
+    url('../fonts/Poppinsregular.woff2') format('woff2'),
+    url('../fonts/Poppinsregular.woff') format('woff'),
+    url('../fonts/Poppinsregular.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Poppins;
+  src:
+    url('../fonts/Poppinspoppins-boldsemibold.woff2') format('woff2'),
+    url('../fonts/Poppinspoppins-boldsemibold.woff') format('woff'),
+    url('../fonts/Poppinspoppins-boldsemibold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
