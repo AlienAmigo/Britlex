@@ -1,20 +1,44 @@
 extends ../pug/layout.pug
 
 block meta
-  title Главная
+  title Britlex
   meta(name='description', content='')
 
-//- block append head
+//- block append hea d
 //-   link(rel='stylesheet', href='css/some.css')
 
 block header
-  p Лого
+  header.header
+    a.logo
+      img.logo__img(src='img/logo.svg', alt='Britlex')
+
+    button.header__mobile-burger-btn(type='button')
+
+    nav.main-nav
+      ul.main-nav__list
+        each item in MainNavItems
+          li.main-nav__item
+            a.main-nav__link(href=`${item.link}`)= item.title
+      button.main-nav__lets-talk-btn(type='button') Let’s Talk
+
 
 block content
-  h1 Заголовок
+  include ../pug/blocks/home
+  include ../pug/blocks/skills
+  include ../pug/blocks/about
+  include ../pug/blocks/pricing
+  include ../pug/blocks/contacts
 
-//- block footer
-//-   p footer
+
+block footer
+  footer.page__footer-wrapper
+    .footer__logo
+      img(src='img/logo.svg', alt='')
+
+    .footer__links-wrapper
+      a.footer__link(href='#') Terms and Conditions
+      a.footer__link(href='#') Privacy Policy
+      a.footer__link(href='#') Cookie Policy
 
 //- block append page-bottom
 //-   script(src='js/some.js')

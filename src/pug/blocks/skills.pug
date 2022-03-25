@@ -1,0 +1,10 @@
+section.skills(id='skills')
+  h2.skills__title Skills
+  .skills__items-wrapper
+    each item in SkillsItems
+      .skills-item
+        .skills-item__img(src=`${item.img}`, alt=`Brtitlex. ${item.title}`)
+        .skills-item__text-wrapper
+          h3.skills-item__title= item.title
+          +splitParagraphs(item.text, 'skills__text')
+          a.btn.btn--skills  Learn more

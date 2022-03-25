@@ -1,0 +1,9 @@
+section.pricing(id='pricing')
+  h2.pricing__title Pricing
+  .pricing__items-wrapper
+    each item in PricingItems
+      .pricing-item
+        img(src=`${item.img}`, alt=`Britlex. ${item.title}`)
+        h3.pricing-item__title= item.title
+        p.pricing-item__text= item.text
+        .pricing-item__price #[span= `£${item.price}`] per month
