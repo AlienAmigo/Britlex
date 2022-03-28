@@ -1,0 +1,21 @@
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto 0;
+
+  &__number {
+    color: #2a3246;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 62px;
+    text-align: center;
+  }
+
+  &__position {
+    font-size: 15px;
+    line-height: 22px;
+    color: #8f95a5;
+    text-align: center;
+  }
+}

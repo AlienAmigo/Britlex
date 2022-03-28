@@ -1,0 +1,30 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  &__title {
+    @include titleStyle;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin: 24px auto 23px;
+    object-position: center;
+    object-fit: contain;
+  }
+
+  &__text {
+    color: $gray-medium;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__facts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

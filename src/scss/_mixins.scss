@@ -150,3 +150,11 @@
     }
   }
 }
+
+@mixin titleStyle {
+  color: #000000;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 80px;
+  text-align: center;
+}

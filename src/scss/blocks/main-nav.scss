@@ -46,14 +46,22 @@
 
   &__link {
     @include hover();
-    color: $gray-dark;
+    color: $gray-medium;
     font-weight: 500;
     font-size: 22px;
     line-height: 65px;
     text-decoration: none;
 
     &:visited {
-      color: $gray-dark;
+      color: $gray-medium;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  .main-nav {
+    &__wrapper {
+      display: flex;
     }
   }
 }

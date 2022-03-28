@@ -1,0 +1,57 @@
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 0 16px 45px;
+  background-color: $gray-light;
+
+  &__img {
+    align-self: center;
+    object-fit: contain;
+    object-position: center;
+
+    &--speaking {
+      width: 213px;
+      height: 213px;
+      margin-top: 8px;
+    }
+
+    &--writing {
+      width: 204px;
+      height: 204px;
+      margin-top: 16px;
+    }
+
+    &--reading {
+      width: 236px;
+      height: 157px;
+      margin-top: 29px;
+    }
+
+    &--listening {
+      width: 232px;
+      height: 154px;
+      margin-top: 33px;
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 80px;
+    color: $gray-darker;
+    text-align: left;
+  }
+
+  &__text {
+    color: $gray-medium;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
+}

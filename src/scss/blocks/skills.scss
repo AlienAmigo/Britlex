@@ -1,0 +1,15 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include titleStyle;
+  }
+
+  &__items-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 21px;
+  }
+}

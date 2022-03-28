@@ -1,0 +1,53 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  border-top: 1px solid #c4c4c4;
+  padding: 26px 0 46px;
+
+  &__logo {
+    width: 71px;
+    height: 36px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: contain;
+    }
+  }
+
+  &__links-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+  }
+
+  &__link {
+    @include hover();
+    color: $gray-medium;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-decoration: none;
+
+    &:not(:last-of-type) {
+
+      &::after {
+        content: '•';
+        margin: 0 5px;
+      }
+    }
+
+    &:active {
+      color: $gray-light;
+    }
+
+    &:visited {
+      color: $gray-medium;
+    }
+  }
+}
