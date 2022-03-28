@@ -6,6 +6,8 @@
     "bemlint": "bemlint build/*.html --mod='--'",
     "puglint": "glob-exec \"src/**/*.pug\" -- \"pug-lint {{files.join(' ')}}\"",
     "stylelint": "stylelint \"src/scss/**/*.scss\"",
+    "stylelint-check": "stylelint-config-prettier-check",
+    "stylelint-scss-check": "stylelint-config-prettier-scss-check",
     "start": "gulp",
     "build": "gulp build",
     "lint-staged": "lint-staged --no-stash",
@@ -50,9 +52,12 @@
     "imagemin-svgo": "^9.0.0",
     "lint-staged": "^11.2.6",
     "pug-lint": "^2.6.0",
-    "stylelint": "^14.0.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^2.0.1",
     "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
     "stylelint-selector-bem-pattern": "^2.1.1"
   },
   "dependencies": {

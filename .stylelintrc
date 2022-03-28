@@ -1,9 +1,10 @@
 {
   "syntax": "scss",
-  "extends": ["stylelint-config-standard-scss"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
   "plugins": [
     "stylelint-selector-bem-pattern",
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-prettier"
   ],
   "rules": {
     # Проверка совпадения селектора и имени файла, БЭМ-ошибок

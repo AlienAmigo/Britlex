@@ -5,6 +5,8 @@ module.exports = {
   printWidth: 120,
   singleQuote: true,
 
+  stylelintIntegration: true,
+
   pugSingleQuote: false,
   // ... more pug* options
 };

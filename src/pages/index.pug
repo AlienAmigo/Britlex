@@ -9,25 +9,26 @@ block meta
 
 block header
   header.header
-    a.logo
-      img.logo__img(src='img/logo.svg', alt='Britlex')
+    a.header__logo(href='/', id='logo-link')
+      img.header__logo-img(src='img/logo.svg', alt='Britlex')
 
-    button.header__mobile-burger-btn(type='button')
+    button.header__mobile-burger-btn(type='button', id='mobile-burger-btn')
 
-    nav.main-nav
-      ul.main-nav__list
-        each item in MainNavItems
-          li.main-nav__item
-            a.main-nav__link(href=`${item.link}`)= item.title
-      button.main-nav__lets-talk-btn(type='button') Let’s Talk
+    nav.main-nav(id='main-nav')
+      .main-nav__wrapper
+        ul.main-nav__list
+          each item in MainNavItems
+            li.main-nav__item
+              a.main-nav__link(href=`${item.link}`)= item.title
+        button.btn.btn--lets-talk(type='button') Let’s Talk
 
 
 block content
-  include ../pug/blocks/home
-  include ../pug/blocks/skills
-  include ../pug/blocks/about
-  include ../pug/blocks/pricing
-  include ../pug/blocks/contacts
+  include ../pug/blocks/home.pug
+  include ../pug/blocks/skills.pug
+  include ../pug/blocks/about.pug
+  include ../pug/blocks/pricing.pug
+  include ../pug/blocks/contacts.pug
 
 
 block footer
