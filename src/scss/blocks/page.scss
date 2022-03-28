@@ -21,7 +21,7 @@
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    padding: 0 15px;
+    padding: 0 $padding-xs;
   }
 
   &__content {
@@ -33,5 +33,13 @@
 
   &__footer-wrapper {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  .page {
+    &__inner {
+      padding: 0 $padding-sm;
+    }
   }
 }

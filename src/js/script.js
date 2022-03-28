@@ -25,16 +25,22 @@ ready(function () {
   }
 
   // MOBILE MENU
-  const BurgerBtn = document.querySelector('#mobile-burger-btn');
+  const BurgerBtn = document.querySelector('#mobile-menu-burger-btn');
+  const MobileMenuCloseBtn = document.querySelector('#mobile-menu-close-btn');
   const MainNav = document.querySelector('#main-nav');
   const MainNavMenu = document.querySelector('.main-nav__wrapper');
   const MainNavLinks = document.querySelectorAll('.main-nav__link');
 
-  if (BurgerBtn && MainNav) {
+  if (BurgerBtn && MainNav && MobileMenuCloseBtn) {
     const toggleMainMenu = () => {
       BurgerBtn.classList.toggle('active');
       MainNav.classList.toggle('active');
     };
+
+    MobileMenuCloseBtn.addEventListener('click', ev => {
+      ev.stopPropagation();
+      toggleMainMenu();
+    });
 
     MainNavMenu.addEventListener('click', ev => {
       ev.stopPropagation();

@@ -12,10 +12,11 @@ block header
     a.header__logo(href='/', id='logo-link')
       img.header__logo-img(src='img/logo.svg', alt='Britlex')
 
-    button.header__mobile-burger-btn(type='button', id='mobile-burger-btn')
+    button.header__mobile-burger-btn(type='button', id='mobile-menu-burger-btn')
 
     nav.main-nav(id='main-nav')
       .main-nav__wrapper
+        button.main-nav__close-btn(type='button', id='mobile-menu-close-btn')
         ul.main-nav__list
           each item in MainNavItems
             li.main-nav__item
