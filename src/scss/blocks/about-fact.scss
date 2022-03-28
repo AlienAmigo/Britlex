@@ -19,3 +19,14 @@
     text-align: center;
   }
 }
+
+@media screen and (min-width: $screen-xs) {
+  .about-fact {
+    margin: 21px auto 0;
+
+    &__position {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

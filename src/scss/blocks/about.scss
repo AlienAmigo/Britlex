@@ -28,3 +28,25 @@
     align-items: center;
   }
 }
+
+@media screen and (min-width: $screen-xs) {
+  .about {
+    &__img {
+      width: 352px;
+      height: 352px;
+      margin: 23px auto 25px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__facts-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+}

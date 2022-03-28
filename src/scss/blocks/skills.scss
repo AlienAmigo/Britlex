@@ -13,3 +13,13 @@
     gap: 21px;
   }
 }
+
+@media screen and (min-width: $screen-xs) {
+  .skills {
+    &__items-wrapper {
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 34px 30px;
+    }
+  }
+}

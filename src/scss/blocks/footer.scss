@@ -51,3 +51,28 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-xs) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: unset;
+    padding: 24px 0 26px;
+
+    &__logo {
+      width: 89px;
+      height: 45px;
+    }
+
+    &__links-wrapper {
+      justify-content: flex-end;
+    }
+
+    &__link {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

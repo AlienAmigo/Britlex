@@ -31,3 +31,26 @@
     object-position: center top;
   }
 }
+
+@media screen and (min-width: $screen-xs) {
+  .home {
+    &__title {
+      margin: 17px 0 26px;
+      font-size: 34px;
+      line-height: 45px;
+    }
+
+    &__text {
+      color: $gray-medium;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    &__img {
+      align-self: center;
+      width: 424px;
+      height: 424px;
+    }
+  }
+}

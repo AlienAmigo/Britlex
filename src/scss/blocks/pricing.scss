@@ -16,3 +16,14 @@
     gap: 65px;
   }
 }
+
+@media screen and (min-width: $screen-xs) {
+  .pricing {
+    margin-top: 119px;
+
+    &__items-wrapper {
+      margin-top: 54px;
+      gap: 70px;
+    }
+  }
+}
