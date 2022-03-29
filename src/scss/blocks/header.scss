@@ -81,3 +81,15 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-sm) {
+  .header {
+    padding: 39px 0;
+
+    &__mobile-burger-btn {
+      @include hover();
+      width: 30px;
+      height: 17px;
+    }
+  }
+}

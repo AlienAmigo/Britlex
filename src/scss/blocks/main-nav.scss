@@ -35,6 +35,7 @@
     border: none;
     background: url('../img/mobile-menu-close.svg') no-repeat center center / auto, $transparent-color;
     cursor: pointer;
+    animation: fadeIn 0.5s ease-in;
   }
 
   &__list {

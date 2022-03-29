@@ -43,3 +43,11 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-sm) {
+  .page {
+    &__inner {
+      padding: 0 $padding-md;
+    }
+  }
+}

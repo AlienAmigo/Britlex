@@ -54,3 +54,40 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-sm) {
+  .home {
+    flex-direction: row-reverse;
+
+    &__title {
+      position: relative;
+      width: 50%;
+      margin: 28px 0 25px;
+      font-size: 36px;
+      line-height: 45px;
+      text-align: left;
+
+      &::before {
+        @include pseudo();
+        bottom: 5px;
+        left: 100%;
+        width: 43px;
+        height: 47px;
+        background: url('../img/title-light.svg') no-repeat center center / contain;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    &__img {
+      align-self: center;
+      width: 50%;
+      height: auto;
+      max-height: calc(50vw - 2 * #{$padding-sm});
+    }
+  }
+}

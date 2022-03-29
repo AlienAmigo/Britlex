@@ -162,4 +162,9 @@
     font-size: 30px;
     line-height: 80px;
   }
+
+  @media screen and (min-width: $screen-md) {
+    font-size: 36px;
+    line-height: 80px;
+  }
 }

@@ -23,3 +23,19 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-sm) {
+  .skills {
+    margin-top: 53px;
+
+    &__items-wrapper {
+      display: grid;
+      align-items: stretch;
+      justify-content: center;
+      grid-template-columns: repeat(3, minmax(227px, 1fr));
+      grid-template-rows: auto minmax(210px, 1fr);
+      grid-gap: 7px 10px;
+      margin-top: 53px;
+    }
+  }
+}
