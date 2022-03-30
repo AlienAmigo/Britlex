@@ -3,7 +3,7 @@ section.skills(id='skills')
   .skills__items-wrapper
     each item in SkillsItems
       .skills-item
-        img.skills-item__img(src=`${item.img}`, alt=`Brtitlex. ${item.title}`, class=`skills-item__img--${item.title.replace(/^([^\s]+)(.*)$/g,'$1').toLowerCase()}`)
+        img.skills-item__img(src=`${item.img}`, alt=`Brtitlex. ${item.title}`, loading='lazy', class=`skills-item__img--${item.title.replace(/^([^\s]+)(.*)$/g,'$1').toLowerCase()}`)
         .skills-item__text-wrapper
           h3.skills-item__title= item.title
           +splitParagraphs(item.text, 'skills-item__text')
