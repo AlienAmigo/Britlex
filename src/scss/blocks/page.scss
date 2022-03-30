@@ -67,3 +67,12 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-xl) {
+  .page {
+    &__inner {
+      width: $screen-xl;
+      margin: 0 auto;
+    }
+  }
+}
