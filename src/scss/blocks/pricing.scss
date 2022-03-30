@@ -55,3 +55,14 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-lg) {
+  .pricing {
+    margin-top: 188px;
+
+    &__items-wrapper {
+      gap: 52px;
+      margin-top: 57px;
+    }
+  }
+}

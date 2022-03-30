@@ -168,8 +168,7 @@
   }
 }
 
-
-@media screen and (min-width: $screen-sm) {
+@media screen and (min-width: $screen-md) {
   .contacts {
     grid-template-columns: 312px 1fr;
     grid-gap: 0 109px;
@@ -197,11 +196,50 @@
       @include text-overflow();
       flex: unset;
       height: 60px;
+      border-radius: 10px;
       font-size: 16px;
       padding: 16px 24px 16px 38px;
 
       &::placeholder {
         font-size: 14px;
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .contacts {
+    grid-template-columns: 477px 1fr;
+    grid-gap: 0  111px;
+    margin: 261px 0 133px;
+
+    &__img {
+      object-position: center;
+    }
+
+    &__title {
+      margin: 0 0 37px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__form {
+      gap: 12px;
+      margin: 52px 0 0;
+    }
+
+    &__form-input {
+      @include text-overflow();
+      height: 80px;
+      font-size: 20px;
+      padding: 16px 24px 16px 33px;
+
+      &::placeholder {
+        font-size: 16px;
         line-height: 1.5em;
       }
     }

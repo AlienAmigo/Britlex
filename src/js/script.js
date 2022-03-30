@@ -63,11 +63,16 @@ ready(function () {
   ScrollLinks.forEach(el => {
     el.addEventListener('click', ev => {
       ev.preventDefault();
-      let anchorTarget = document.querySelector(`#${el.href.replace(/^.+#(.+)$/g, '$1')}`);
+      let anchorTarget = document.querySelector(
+        `#${el.href.replace(/^.+#(.+)$/g, '$1')}`
+      );
       window.scrollBy({
-        top: anchorTarget.getBoundingClientRect().top - 110,
+        top:
+          window.innerWidth < 1600
+            ? anchorTarget.getBoundingClientRect().top - 110
+            : anchorTarget.getBoundingClientRect().top - 150,
         left: 0,
-        behavior: 'smooth',
+        behavior: 'smooth'
       });
     });
   });

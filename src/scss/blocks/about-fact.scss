@@ -47,3 +47,17 @@
   }
 }
 
+@media screen and (min-width: $screen-lg) {
+  .about-fact {
+    &__number {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &__position {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+

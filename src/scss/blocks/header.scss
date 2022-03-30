@@ -103,3 +103,14 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-lg) {
+  .header {
+    padding: 55px 0;
+
+    &__logo {
+      width: 106px;
+      height: 54px;
+    }
+  }
+}

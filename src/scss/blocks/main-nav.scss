@@ -156,3 +156,17 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-lg) {
+  .main-nav {
+
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+
+      &:visited {
+        color: $gray-darker;
+      }
+    }
+  }
+}

@@ -239,3 +239,47 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-lg) {
+  .skills-item {
+    padding: 35px 43px 44px;
+
+    &__img {
+      &--speaking {
+        width: 390px;
+        height: 390px;
+        margin: -16px auto 0 -7px;
+      }
+
+      &--writing {
+        width: 293px;
+        height: 293px;
+        margin: -20px  19px -36px auto;
+      }
+
+      &--reading {
+        width: 371px;
+        height: 247px;
+        margin: -36px auto -1px -1 px;
+      }
+
+      &--listening {
+        width: 50%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 -18px 0 auto;
+      }
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 80px;
+    }
+
+    &__text {
+      margin-bottom: 33px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

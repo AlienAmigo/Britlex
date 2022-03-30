@@ -108,3 +108,23 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-lg) {
+  .about {
+    grid-template-columns: auto 44.05%;
+    grid-gap: 0 190px;
+    margin-top: 282px;
+
+    &__text {
+      margin-top: 23px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__facts-wrapper {
+      justify-content: flex-start;
+      gap: 90px;
+      margin-top: 46px;
+    }
+  }
+}
