@@ -83,3 +83,28 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-md) {
+  .about {
+    grid-template-columns: auto 38.75%;
+    grid-gap: 0 72px;
+
+    &__img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      margin: 0;
+    }
+
+    &__text {
+      margin-top: 13px;
+    }
+
+    &__facts-wrapper {
+      justify-content: flex-start;
+      gap: 50px;
+      margin-top: 16px;
+    }
+  }
+}

@@ -202,3 +202,40 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-md) {
+  .skills-item {
+    padding: 16px 29px 34px;
+
+    &__img {
+      &--speaking {
+        width: 260px;
+        height: 260px;
+        margin: -16px auto 0 -7px;
+      }
+
+      &--writing {
+        width: 205px;
+        height: 205px;
+        margin: -11px -19px -30px auto;
+      }
+
+      &--reading {
+        width: 243px;
+        height: 162px;
+        margin: 0 auto 3px -23px;
+      }
+
+      &--listening {
+        width: 254px;
+        max-width: calc(100% - 200px);
+        height: 169px;
+        margin: 0 2px 0 auto;
+      }
+    }
+
+    &__text {
+      margin-bottom: 26px;
+    }
+  }
+}

@@ -45,15 +45,13 @@
 
 @media screen and (min-width: $screen-md) {
   .pricing {
-    margin-top: 100px;
-
     &__items-wrapper {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
+      gap: 40px;
       margin-top: 10px;
-      gap: 5px;
     }
   }
 }

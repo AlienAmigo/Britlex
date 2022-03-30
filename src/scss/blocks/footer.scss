@@ -27,7 +27,6 @@
   }
 
   &__link {
-    @include hover();
     color: $gray-medium;
     font-weight: 500;
     font-size: 11px;
@@ -35,7 +34,6 @@
     text-decoration: none;
 
     &:not(:last-of-type) {
-
       &::after {
         content: '•';
         margin: 0 5px;
@@ -48,6 +46,12 @@
 
     &:visited {
       color: $gray-medium;
+    }
+
+    &:hover {
+      &:not(::after) {
+        @include hover();
+      }
     }
   }
 }
@@ -88,6 +92,17 @@
     &__link {
       font-size: 13px;
       line-height: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .footer {
+    padding: 22px 0 24px;
+
+    &__link {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }

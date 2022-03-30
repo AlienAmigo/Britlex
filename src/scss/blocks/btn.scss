@@ -138,3 +138,41 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-md) {
+  .btn {
+    &--lets-talk {
+      width: 160px;
+      height: 50px;
+      margin: 0 0 0 100px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &--home {
+      width: 292px;
+      height: 80px;
+      margin: 35px auto 0 0;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &--skills {
+      width: 196px;
+      height: 57px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &--contacts-form-subscribe {
+      width: 193px;
+      min-width: 193px;
+      height: 60px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

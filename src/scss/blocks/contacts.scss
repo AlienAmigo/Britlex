@@ -167,3 +167,43 @@
     }
   }
 }
+
+
+@media screen and (min-width: $screen-sm) {
+  .contacts {
+    grid-template-columns: 312px 1fr;
+    grid-gap: 0 109px;
+    margin: 140px 0 157px;
+
+    &__img {
+      object-position: center top;
+    }
+
+    &__title {
+      margin: 0 0 3px 10px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__form {
+      gap: 14px;
+      margin: 34px 0 0;
+    }
+
+    &__form-input {
+      @include text-overflow();
+      flex: unset;
+      height: 60px;
+      font-size: 16px;
+      padding: 16px 24px 16px 38px;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 1.5em;
+      }
+    }
+  }
+}

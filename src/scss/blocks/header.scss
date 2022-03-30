@@ -93,3 +93,13 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-md) {
+  .header {
+    padding: 25px 0;
+
+    &__mobile-burger-btn {
+      display: none;
+    }
+  }
+}

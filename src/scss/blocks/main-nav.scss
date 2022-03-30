@@ -33,7 +33,9 @@
     width: 34px;
     height: 34px;
     border: none;
-    background: url('../img/mobile-menu-close.svg') no-repeat center center / auto, $transparent-color;
+    background:
+      url('../img/mobile-menu-close.svg') no-repeat center center / auto,
+      $transparent-color;
     cursor: pointer;
     animation: fadeIn 0.5s ease-in;
   }
@@ -99,6 +101,58 @@
     &__wrapper {
       display: flex;
       max-width: 430px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    background-color: $transparent-color;
+    animation: none;
+
+    &__close-btn {
+      display: none;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      max-width: unset;
+      height: max-content;
+      margin: 0;
+      padding: 0;
+      background-color: $transparent-color;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__link {
+      color: $gray-darker;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      opacity: 1;
+
+      &:visited {
+        color: $gray-darker;
+      }
     }
   }
 }

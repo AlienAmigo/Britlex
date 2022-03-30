@@ -51,3 +51,11 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-md) {
+  .page {
+    &__inner {
+      padding: 0 $padding-lg;
+    }
+  }
+}

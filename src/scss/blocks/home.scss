@@ -91,3 +91,36 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-md) {
+  .home {
+    &__title {
+      width: 60.5%;
+      margin: 55px 0 27px;
+      font-size: 48px;
+      line-height: 64px;
+
+      &::before {
+        @include pseudo();
+        bottom: 34px;
+        left: calc(100% + 31px);
+        width: 49px;
+        height: 54px;
+        background: url('../img/title-light.svg') no-repeat center center / contain;
+      }
+    }
+
+    &__text {
+      width: 80%;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__img {
+      align-self: center;
+      width: 50%;
+      height: auto;
+      max-height: calc(50vw - 2 * #{$padding-md});
+    }
+  }
+}
