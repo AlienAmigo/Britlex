@@ -1,0 +1,83 @@
+.up-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 50;
+  right: 1vw;
+  bottom: 32px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: url('../img/up-btn.svg') no-repeat center center / 45%, $gray-darker;
+  cursor: pointer;
+  visibility: hidden;
+
+  &.active {
+    display: flex;
+    visibility: visible;
+    transition: opacity 0.25s ease-in;
+    animation: fadeInUpBtn 0.5s ease;
+    opacity: 0.35;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  /* stylelint-disable-next-line */
+  @-webkit-keyframes fadeInUpBtn {
+
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0); /* stylelint-disable-line property-no-vendor-prefix */
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 0.35;
+      -webkit-transform: translate3d(0, 0, 0); /* stylelint-disable-line property-no-vendor-prefix */
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  /* stylelint-disable-next-line */
+  @keyframes fadeInUpBtn {
+
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0); /* stylelint-disable-line property-no-vendor-prefix */
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 0.35;
+      -webkit-transform: translate3d(0, 0, 0); /* stylelint-disable-line property-no-vendor-prefix */
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  .up-btn {
+    right: 3vw;
+    width: 54px;
+    height: 54px;
+    background: url('../img/up-btn.svg') no-repeat center center / 50%, $gray-darker;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .up-btn {
+    right: 4vw;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .up-btn {
+    right: 5vw;
+    width: 80px;
+    height: 80px;
+    background: url('../img/up-btn.svg') no-repeat center center / 55%, $gray-darker;
+  }
+}

@@ -76,4 +76,20 @@ ready(function () {
       });
     });
   });
+
+  // UP BUTTON
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const showUpBtn = () =>
+    window.scrollY > 120
+      ? myUpBtn.classList.add("active")
+      : myUpBtn.classList.remove("active");
+
+  const myUpBtn = document.querySelector("#up-btn");
+  if (myUpBtn) {
+    myUpBtn.addEventListener("click", scrollToTop);
+    window.addEventListener("scroll", showUpBtn);
+  }
 });
