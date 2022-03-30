@@ -1,7 +1,7 @@
 {
-  "name": "start-kit",
-  "version": "2.0.0",
-  "description": "Project start-kit",
+  "name": "Britlex",
+  "version": "1.0.0",
+  "description": "Britlex landing page",
   "scripts": {
     "bemlint": "bemlint build/*.html --mod='--'",
     "puglint": "glob-exec \"src/**/*.pug\" -- \"pug-lint {{files.join(' ')}}\"",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlienAmigo/AlienStartKit.git"
+    "url": "https://github.com/AlienAmigo/Britlex.git"
   },
   "lint-staged": {
     "*.{js,pug,md}": "editorconfig-cli",

@@ -1,4 +1,11 @@
-# Стартовый проект для вёрстки
+# Britlex
+
+---
+
+* репозиторий проекта: https://github.com/AlienAmigo/Britlex.git
+* посмотреть онлайн: https://alienamigo.github.io/Britlex
+* макет: https://www.figma.com/file/ecdXM6yzHXdoPo7WcLYJUk/Britlex-Landing?node-id=0%3A1
+
 ---
 Обязательно добавьте поддержку [editorconfig](https://editorconfig.org/#download) в ваш редактор кода.
 
