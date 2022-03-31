@@ -79,7 +79,11 @@ ready(function () {
 
   // UP BUTTON
   const scrollToTop = () => {
-    window.scrollTo(0, 0);
+    window.window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   };
 
   const showUpBtn = () =>
