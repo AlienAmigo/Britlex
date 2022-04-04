@@ -16,7 +16,7 @@ ready(function () {
   if (LogoLink) {
     LogoLink.addEventListener('click', ev => {
       ev.preventDefault();
-      window.scroll({
+      window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
@@ -66,7 +66,7 @@ ready(function () {
       let anchorTarget = document.querySelector(
         `#${el.href.replace(/^.+#(.+)$/g, '$1')}`
       );
-      window.scrollBy({
+      window.scrollTo({
         top:
           window.innerWidth < 1600
             ? anchorTarget.getBoundingClientRect().top - 110
@@ -79,7 +79,7 @@ ready(function () {
 
   // UP BUTTON
   const scrollToTop = () => {
-    window.window.scroll({
+    window.window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
@@ -96,4 +96,39 @@ ready(function () {
     myUpBtn.addEventListener("click", scrollToTop);
     window.addEventListener("scroll", showUpBtn);
   }
+
+  // LOADER
+  const Loader = document.querySelector('#page-loader');
+  const DocBody = document.querySelector('body');
+
+  if (Loader && DocBody) {
+    const DocBodyOverflow = DocBody.style.overflow;
+    DocBody.style.overflow = 'hidden';
+
+    window.setTimeout(() => removeLoader(), 5000);
+    const Images = document.querySelectorAll('img');
+    let loadedImagesCount = 0;
+
+    const removeLoader = () => {
+        DocBody.style.overflow = DocBodyOverflow;
+        Loader.remove();
+    };
+
+    const onImgLoad = () => {
+      loadedImagesCount += 1;
+      if (loadedImagesCount === Images.length) {
+        removeLoader();
+      }
+    }
+
+    window.addEventListener('load', ev => {
+      Images.forEach(item => {
+        if (item.complete && item.naturalHeight >= 0) {
+          onImgLoad(item);
+        }
+      })
+    })
+  }
+
+// -------- END OF READY FUNCTION
 });

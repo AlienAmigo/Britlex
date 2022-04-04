@@ -138,6 +138,7 @@
       flex: 1;
       flex-flow: column wrap;
       align-items: flex-start;
+      max-width: 100%;
     }
 
     &:last-of-type {
@@ -154,13 +155,14 @@
     &__img {
       align-self: flex-start;
       position: relative;
+      max-width: 100%;
 
       &--speaking {
         top: unset;
         left: unset;
         width: 214px;
         height: 214px;
-        margin: 17px auto 2px -16px;
+        margin: 17px 4% 2px -16px;
       }
 
       &--writing {
@@ -211,7 +213,7 @@
       &--speaking {
         width: 260px;
         height: 260px;
-        margin: -16px auto 0 -7px;
+        margin: -16px 6.86% 0 7.26%;
       }
 
       &--writing {
