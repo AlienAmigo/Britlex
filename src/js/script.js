@@ -67,7 +67,6 @@ ready(function () {
       let anchorTarget = document.querySelector(
         `#${el.href.replace(/^.+#(.+)$/g, '$1')}`
       );
-      console.log(anchorTarget.getBoundingClientRect().top);
       window.scrollTo({
         top:
           window.innerWidth < 1600
