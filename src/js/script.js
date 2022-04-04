@@ -60,17 +60,19 @@ ready(function () {
   const ScrollLinks = document.querySelectorAll(
     'a[href*="#"]:not(a[href="#"])'
   );
+
   ScrollLinks.forEach(el => {
     el.addEventListener('click', ev => {
       ev.preventDefault();
       let anchorTarget = document.querySelector(
         `#${el.href.replace(/^.+#(.+)$/g, '$1')}`
       );
+      console.log(anchorTarget.getBoundingClientRect().top);
       window.scrollTo({
         top:
           window.innerWidth < 1600
-            ? anchorTarget.getBoundingClientRect().top - 110
-            : anchorTarget.getBoundingClientRect().top - 150,
+            ? anchorTarget.getBoundingClientRect().top + window.scrollY - 110
+            : anchorTarget.getBoundingClientRect().top + window.scrollY - 150,
         left: 0,
         behavior: 'smooth'
       });
@@ -143,12 +145,11 @@ ready(function () {
     SubscribeForm.addEventListener('submit', ev => {
       ev.preventDefault();
 
-
       if (SubscribeFormMailInput) {
         if (SubscribeFormMailInput.value.match(/[\w.]+@[\w.]+\.\w+/)) {
           let subscribePopupInnerHTML = `<div class="subscribe-popup__email">${SubscribeFormMailInput.value}</div>
-    <p class="subscribe-popup__message">Thank you for subscribing!</p>
-    <button class="btn btn--popup-submit" type="button" onclick={popupLibrary.close()}>Done!</button>`;
+            <p class="subscribe-popup__message">Thank you for subscribing!</p>
+            <button class="btn btn--popup-submit" type="button" onclick={popupLibrary.close()}>Done!</button>`;
           popupLibrary.open(subscribePopupInnerHTML);
         }
       }
