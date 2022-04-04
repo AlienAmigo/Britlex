@@ -1,0 +1,28 @@
+.subscribe-popup {
+  &__email {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__message {
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .subscribe-popup {
+    &__email {
+      margin-bottom: 25px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__message {
+      font-size: 18px;
+    }
+  }
+}

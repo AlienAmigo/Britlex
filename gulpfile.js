@@ -130,7 +130,7 @@ exports.compileStyles = compileStyles;
 
 function processJs(cb) {
   if (options.processJs)
-    return src(dir.src + "js/script.js")
+    return src([dir.src + "js/popup.js", dir.src + "js/script.js"])
       .pipe(
         plumber({
           errorHandler: function (err) {

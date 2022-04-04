@@ -84,17 +84,18 @@ ready(function () {
       left: 0,
       behavior: 'smooth'
     });
+    // setTimeout(scrollToTop, 0);
   };
 
   const showUpBtn = () =>
     window.scrollY > 120
-      ? myUpBtn.classList.add("active")
-      : myUpBtn.classList.remove("active");
+      ? myUpBtn.classList.add('active')
+      : myUpBtn.classList.remove('active');
 
-  const myUpBtn = document.querySelector("#up-btn");
+  const myUpBtn = document.querySelector('#up-btn');
   if (myUpBtn) {
-    myUpBtn.addEventListener("click", scrollToTop);
-    window.addEventListener("scroll", showUpBtn);
+    myUpBtn.addEventListener('click', scrollToTop);
+    window.addEventListener('scroll', showUpBtn);
   }
 
   // LOADER
@@ -110,8 +111,9 @@ ready(function () {
     let loadedImagesCount = 0;
 
     const removeLoader = () => {
-        DocBody.style.overflow = DocBodyOverflow;
-        Loader.remove();
+      DocBody.style.overflow = DocBodyOverflow;
+      Loader.remove();
+      popupLibrary.init();
     };
 
     const onImgLoad = () => {
@@ -119,16 +121,39 @@ ready(function () {
       if (loadedImagesCount === Images.length) {
         removeLoader();
       }
-    }
+    };
 
     window.addEventListener('load', ev => {
       Images.forEach(item => {
         if (item.complete && item.naturalHeight >= 0) {
-          onImgLoad(item);
+          onImgLoad();
         }
-      })
-    })
+      });
+    });
   }
 
-// -------- END OF READY FUNCTION
+  // Subscribe Form
+
+  const SubscribeForm = document.querySelector('#subscribe-form');
+  const SubscribeFormMailInput = document.querySelector(
+    '#subscribe-form > input[type="email"]'
+  );
+
+  if (SubscribeForm) {
+    SubscribeForm.addEventListener('submit', ev => {
+      ev.preventDefault();
+
+
+      if (SubscribeFormMailInput) {
+        if (SubscribeFormMailInput.value.match(/[\w.]+@[\w.]+\.\w+/)) {
+          let subscribePopupInnerHTML = `<div class="subscribe-popup__email">${SubscribeFormMailInput.value}</div>
+    <p class="subscribe-popup__message">Thank you for subscribing!</p>
+    <button class="btn btn--popup-submit" type="button" onclick={popupLibrary.close()}>Done!</button>`;
+          popupLibrary.open(subscribePopupInnerHTML);
+        }
+      }
+    });
+  }
+
+  // -------- END OF READY FUNCTION
 });
