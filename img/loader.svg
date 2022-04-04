@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="100px" height="30px" viewBox="0 0 100 30" preserveAspectRatio="xMidYMid">
+  <text x="50" y="15" text-anchor="middle" dy="0.38em" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#8f95a5" stroke-width="0.6000000000000001" font-size="24" font-family="arial">
+    loading...
+    <animate attributeName="stroke-dasharray" repeatCount="indefinite" calcMode="spline" dur="5.5555555555555545s" values="0 100;100 100;0 100" keyTimes="0;0.5;1" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"></animate>
+    <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="5.5555555555555545s" values="0;0;-100" keyTimes="0;0.5;1"></animate>
+  </text>
+</svg>

@@ -26,9 +26,25 @@
 </head>
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="loader" id="page-loader">
+    <div class="loader__wrapper">
+      <div class="loader__logo"><svg xmlns="http://www.w3.org/2000/svg" fill="none" width="104" height="29" viewBox="0 0 104 29">
+          <path d="M13.336 15.076a5.19 5.19 0 0 1 2.484 1.116 6.279 6.279 0 0 1 1.8 2.232c.456.888.684 1.836.684 2.844 0 1.272-.324 2.424-.972 3.456-.648 1.008-1.596 1.812-2.844 2.412-1.224.576-2.676.864-4.356.864H.772V2.908h9c1.704 0 3.156.288 4.356.864 1.2.552 2.1 1.308 2.7 2.268.6.96.9 2.04.9 3.24 0 1.488-.408 2.724-1.224 3.708-.792.96-1.848 1.656-3.168 2.088Zm-9.288-1.332h5.508c1.536 0 2.724-.36 3.564-1.08.84-.72 1.26-1.716 1.26-2.988s-.42-2.268-1.26-2.988c-.84-.72-2.052-1.08-3.636-1.08H4.048v8.136ZM9.844 25.3c1.632 0 2.904-.384 3.816-1.152.912-.768 1.368-1.836 1.368-3.204 0-1.392-.48-2.484-1.44-3.276-.96-.816-2.244-1.224-3.852-1.224H4.048V25.3h5.796Zm16.282-13.824c.576-1.128 1.392-2.004 2.448-2.628 1.08-.624 2.388-.936 3.924-.936v3.384h-.864c-3.672 0-5.508 1.992-5.508 5.976V28H22.85V8.272h3.276v3.204Zm11.846-6.408a2.155 2.155 0 0 1-1.584-.648 2.155 2.155 0 0 1-.648-1.584c0-.624.216-1.152.648-1.584.432-.432.96-.648 1.584-.648.6 0 1.104.216 1.512.648.432.432.648.96.648 1.584 0 .624-.216 1.152-.648 1.584a1.997 1.997 0 0 1-1.512.648Zm1.584 3.204V28H36.28V8.272h3.276Zm9.58 2.7V22.6c0 .96.203 1.644.61 2.052.409.384 1.117.576 2.125.576h2.412V28H51.33c-1.824 0-3.192-.42-4.104-1.26-.912-.84-1.368-2.22-1.368-4.14V10.972h-2.556v-2.7h2.556V3.304h3.276v4.968h5.148v2.7h-5.148Z" fill="#000" />
+          <path d="M61.529 1.36V28h-3.277V1.36h3.276Zm23.583 16.02c0 .624-.036 1.284-.108 1.98H69.236c.12 1.944.78 3.468 1.98 4.572 1.224 1.08 2.7 1.62 4.428 1.62 1.416 0 2.592-.324 3.528-.972a5.302 5.302 0 0 0 2.016-2.664h3.528c-.528 1.896-1.584 3.444-3.168 4.644-1.584 1.176-3.552 1.764-5.904 1.764-1.872 0-3.552-.42-5.04-1.26-1.464-.84-2.616-2.028-3.456-3.564-.84-1.56-1.26-3.36-1.26-5.4 0-2.04.408-3.828 1.224-5.364.816-1.536 1.956-2.712 3.42-3.528 1.488-.84 3.192-1.26 5.112-1.26 1.872 0 3.528.408 4.968 1.224a8.324 8.324 0 0 1 3.312 3.384c.792 1.416 1.188 3.024 1.188 4.824Zm-3.384-.684c0-1.248-.276-2.316-.828-3.204a5.21 5.21 0 0 0-2.268-2.052c-.936-.48-1.98-.72-3.132-.72-1.656 0-3.072.528-4.248 1.584-1.152 1.056-1.812 2.52-1.98 4.392h12.456ZM99.732 28l-4.68-7.344-4.5 7.344h-3.42l6.372-9.792-6.372-9.936h3.708l4.68 7.308 4.464-7.308h3.42l-6.336 9.756L103.44 28h-3.708Z" fill="#939393" />
+        </svg></div>
+      <div class="loader__loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="100px" height="30px" viewBox="0 0 100 30" preserveAspectRatio="xMidYMid">
+          <text x="50" y="15" text-anchor="middle" dy="0.38em" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#8f95a5" stroke-width="0.6000000000000001" font-size="24" font-family="arial">
+            loading...
+            <animate attributeName="stroke-dasharray" repeatCount="indefinite" calcMode="spline" dur="5.5555555555555545s" values="0 100;100 100;0 100" keyTimes="0;0.5;1" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"></animate>
+            <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="5.5555555555555545s" values="0;0;-100" keyTimes="0;0.5;1"></animate>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
   <div class="page__inner">
     <main class="page__content">
-      <header class="header"><a class="header__logo" href="/" id="logo-link"><img class="header__logo-img" src="img/logo.svg" alt="Britlex" loading="lazy"></a><button class="header__mobile-burger-btn" type="button" id="mobile-menu-burger-btn"></button>
+      <header class="header"><a class="header__logo" href="/" id="logo-link"><img class="header__logo-img" src="img/logo.svg" alt="Britlex"></a><button class="header__mobile-burger-btn" type="button" id="mobile-menu-burger-btn"></button>
         <nav class="main-nav" id="main-nav">
           <div class="main-nav__wrapper"><button class="main-nav__close-btn" type="button" id="mobile-menu-close-btn"></button>
             <ul class="main-nav__list">
@@ -45,31 +61,31 @@
         <div class="home__text-wrapper">
           <h1 class="home__title">Learn Any&nbsp;Foreign Language</h1>
           <p class="home__text">With our teachers who write a&nbsp;program for each student, you will&nbsp;be able to&nbsp;make your first sketch after the&nbsp;first lesson.</p><a class="btn btn--home" href="#">Get started</a>
-        </div><img class="home__img" src="img/home.svg" alt="Britlex. Learn Any Foreign Language" loading="lazy">
+        </div><img class="home__img" src="img/home.svg" alt="Britlex. Learn Any Foreign Language">
       </section>
       <section class="skills" id="skills">
         <h2 class="skills__title">Skills</h2>
         <div class="skills__items-wrapper">
-          <div class="skills-item"><img class="skills-item__img skills-item__img--speaking" src="img/skills01.svg" alt="Brtitlex. Speaking" loading="lazy">
+          <div class="skills-item"><img class="skills-item__img skills-item__img--speaking" src="img/skills01.svg" alt="Brtitlex. Speaking">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Speaking</h3>
               <p class="skills-item__text">Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</p>
               <p class="skills-item__text">Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.</p><a class="btn btn--skills"> Learn more</a>
             </div>
           </div>
-          <div class="skills-item"><img class="skills-item__img skills-item__img--writing" src="img/skills02.svg" alt="Brtitlex. Writing" loading="lazy">
+          <div class="skills-item"><img class="skills-item__img skills-item__img--writing" src="img/skills02.svg" alt="Brtitlex. Writing">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Writing</h3>
               <p class="skills-item__text">One of the most important and extensive areas of natural science, the science that studies substances, also their composition</p><a class="btn btn--skills"> Learn more</a>
             </div>
           </div>
-          <div class="skills-item"><img class="skills-item__img skills-item__img--reading" src="img/skills03.svg" alt="Brtitlex. Reading" loading="lazy">
+          <div class="skills-item"><img class="skills-item__img skills-item__img--reading" src="img/skills03.svg" alt="Brtitlex. Reading">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Reading</h3>
               <p class="skills-item__text">perception and response actions of the user resulting from the use and/or upcoming use of the product, system or service</p><a class="btn btn--skills"> Learn more</a>
             </div>
           </div>
-          <div class="skills-item"><img class="skills-item__img skills-item__img--listening" src="img/skills04.svg" alt="Brtitlex. Listening" loading="lazy">
+          <div class="skills-item"><img class="skills-item__img skills-item__img--listening" src="img/skills04.svg" alt="Brtitlex. Listening">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Listening</h3>
               <p class="skills-item__text">Here you can find activities to practise your listening skills. Listening will help you to improve your understanding</p><a class="btn btn--skills"> Learn more</a>
@@ -78,7 +94,7 @@
         </div>
       </section>
       <section class="about" id="about">
-        <h2 class="about__title">About Us</h2><img class="about__img" src="img/about.svg" alt="Britlex. About" loading="lazy">
+        <h2 class="about__title">About Us</h2><img class="about__img" src="img/about.svg" alt="Britlex. About">
         <div class="about__text-wrapper">
           <p class="about__text">The model offers a framework for discussing problems related to the user's experience, as well as possible ways and means of solving them. Application development begins at the top level (strategy), where the future software product is described quite abstractly from the point of view of the expectations of both users and the customer.</p>
           <div class="about__facts-wrapper">
@@ -100,24 +116,24 @@
       <section class="pricing" id="pricing">
         <h2 class="pricing__title">Pricing</h2>
         <div class="pricing__items-wrapper">
-          <div class="pricing-item"><img class="pricing-item__img pricing-item__img--self-study" src="img/pricing01.svg" alt="Britlex. Self-study online course" loading="lazy">
+          <div class="pricing-item"><img class="pricing-item__img pricing-item__img--self-study" src="img/pricing01.svg" alt="Britlex. Self-study online course">
             <h3 class="pricing-item__title">Self-study online course</h3>
             <p class="pricing-item__text">Start learning English online in live classes with qualified EC teachers and students from all over the world.</p>
             <div class="pricing-item__price"><span>£5.99</span>&ensp;per month</div>
           </div>
-          <div class="pricing-item"><img class="pricing-item__img pricing-item__img--live" src="img/pricing02.svg" alt="Britlex. Live online classes" loading="lazy">
+          <div class="pricing-item"><img class="pricing-item__img pricing-item__img--live" src="img/pricing02.svg" alt="Britlex. Live online classes">
             <h3 class="pricing-item__title">Live online classes</h3>
             <p class="pricing-item__text">Interactive group classes with expert teachers. Free 7-day trial</p>
             <div class="pricing-item__price"><span>£12.99</span>&ensp;per month</div>
           </div>
-          <div class="pricing-item"><img class="pricing-item__img pricing-item__img--personal" src="img/pricing03.svg" alt="Britlex. Personal Tuition" loading="lazy">
+          <div class="pricing-item"><img class="pricing-item__img pricing-item__img--personal" src="img/pricing03.svg" alt="Britlex. Personal Tuition">
             <h3 class="pricing-item__title">Personal Tuition</h3>
             <p class="pricing-item__text">Online one-to-one English tutoring — enjoy our first session for only $1</p>
             <div class="pricing-item__price"><span>£20.99</span>&ensp;per month</div>
           </div>
         </div>
       </section>
-      <section class="contacts" id="contacts"><img class="contacts__img" src="img/contacts.svg" alt="Briitlex. Contact Us" loading="lazy">
+      <section class="contacts" id="contacts"><img class="contacts__img" src="img/contacts.svg" alt="Briitlex. Contact Us">
         <h2 class="contacts__title">Contact Us</h2>
         <div class="contacts__text-wrapper">
           <p class="contacts__text">Discover your current English level by taking our free online English test.Sign up to our newsletter for learning tips and free resource</p>
@@ -128,7 +144,7 @@
     <div class="page__footer-wrapper">
       <div class="up-btn" id="up-btn"></div>
       <footer class="footer">
-        <div class="footer__logo"><img src="img/logo.svg" alt="" loading="lazy"></div>
+        <div class="footer__logo"><img src="img/logo.svg" alt="Britlex"></div>
         <div class="footer__links-wrapper"><a class="footer__link" href="#">Terms and Conditions</a><a class="footer__link" href="#">Privacy Policy</a><a class="footer__link" href="#">Cookie Policy</a></div>
       </footer>
     </div>
