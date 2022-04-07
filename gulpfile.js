@@ -155,7 +155,7 @@ exports.processJs = processJs;
 
 function copyJsVendors(cb) {
   if (options.copyJsVendors) {
-    return src(["node_modules/svg4everybody/dist/svg4everybody.min.js"])
+    return src(["node_modules/svg4everybody/dist/svg4everybody.min.js", "node_modules/locomotive-scroll/dist/locomotive-scroll.js"])
       .pipe(concat("vendors.min.js"))
       .pipe(dest(dir.build + "js/"));
   }

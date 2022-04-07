@@ -58,7 +58,7 @@
 }
 
 // стилизация скролла эл-та
-@mixin scroll-style($width: 7px, $scrollbar-color: #D1D1D1) {
+@mixin scroll-style($width: 7px, $scrollbar-color: #d1d1d1) {
   // стилизация скролла
   // Mozilla
   scrollbar-color: rgba(0, 0, 0, 0.4) $scrollbar-color;

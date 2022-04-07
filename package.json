@@ -63,6 +63,7 @@
   "dependencies": {
     "cpy": "^8.1.2",
     "gulp.spritesmith": "^6.12.1",
+    "locomotive-scroll": "^4.1.4",
     "merge-stream": "^2.0.0",
     "module": "^1.2.5",
     "npm": "^8.1.3",
