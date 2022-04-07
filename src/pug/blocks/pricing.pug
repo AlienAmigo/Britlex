@@ -1,9 +1,12 @@
-section.pricing(id='pricing')
+section#pricing.pricing(data-scroll-section)
   h2.pricing__title Pricing
   .pricing__items-wrapper
     each item in PricingItems
       .pricing-item
-        img.pricing-item__img(src=`${item.img}`, alt=`Britlex. ${item.title}`, class=`pricing-item__img--${item.title.replace(/^([^\s]+).*/g,'$1').toLowerCase()}`)
+        img.pricing-item__img(
+          class=`pricing-item__img--${item.title.replace(/^([^\s]+).*/g,'$1').toLowerCase()}`,
+          src=`${item.img}`,
+          alt=`Britlex. ${item.title}`)
         h3.pricing-item__title= item.title
         p.pricing-item__text= item.text
         .pricing-item__price #[span= `£${item.price}`]&ensp;per month

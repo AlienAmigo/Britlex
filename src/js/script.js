@@ -11,16 +11,24 @@ function ready(fn) {
 }
 
 ready(function () {
+  // Locomotive Scroll
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    tablet: {
+      smooth: true
+    },
+    smartphone: {
+      smooth: true
+    }
+  });
+
   // LOGO LINK
   const LogoLink = document.querySelector('#logo-link');
   if (LogoLink) {
     LogoLink.addEventListener('click', ev => {
       ev.preventDefault();
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
+      scroll.scrollTo(0, 0);
     });
   }
 
@@ -67,37 +75,12 @@ ready(function () {
       let anchorTarget = document.querySelector(
         `#${el.href.replace(/^.+#(.+)$/g, '$1')}`
       );
-      window.scrollTo({
-        top:
-          window.innerWidth < 1600
-            ? anchorTarget.getBoundingClientRect().top + window.scrollY - 110
-            : anchorTarget.getBoundingClientRect().top + window.scrollY - 150,
-        left: 0,
-        behavior: 'smooth'
+      let scrollOffset = window.innerWidth < 1600 ? -110 : -170;
+      scroll.scrollTo(anchorTarget, {
+        offset: scrollOffset
       });
     });
   });
-
-  // UP BUTTON
-  const scrollToTop = () => {
-    window.window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-    // setTimeout(scrollToTop, 0);
-  };
-
-  const showUpBtn = () =>
-    window.scrollY > 120
-      ? myUpBtn.classList.add('active')
-      : myUpBtn.classList.remove('active');
-
-  const myUpBtn = document.querySelector('#up-btn');
-  if (myUpBtn) {
-    myUpBtn.addEventListener('click', scrollToTop);
-    window.addEventListener('scroll', showUpBtn);
-  }
 
   // LOADER
   const Loader = document.querySelector('#page-loader');
@@ -154,6 +137,36 @@ ready(function () {
       }
     });
   }
+
+  // UP BUTTON
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const showUpBtn = () =>
+    window.scrollY > 120
+      ? myUpBtn.classList.add('active')
+      : myUpBtn.classList.remove('active');
+
+  const myUpBtn = document.querySelector('#up-btn');
+  if (myUpBtn) {
+    myUpBtn.addEventListener('click', () => scroll.scrollTo(0, 0));
+    window.addEventListener('scroll', showUpBtn);
+  }
+
+  scroll.on('call', (value, way, obj) => {
+    if (value === 'toggleBackToTop') {
+      if (way === 'enter') {
+        myUpBtn.classList.remove('active');
+      } else {
+        myUpBtn.classList.add('active');
+      }
+    }
+  });
 
   // -------- END OF READY FUNCTION
 });
