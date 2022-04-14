@@ -43,8 +43,8 @@
     </div>
   </div>
   <div class="page__inner">
-    <main class="page__content">
-      <header class="header"><a class="header__logo" href="/" id="logo-link"><img class="header__logo-img" src="img/logo.svg" alt="Britlex"></a><button class="header__mobile-burger-btn" type="button" id="mobile-menu-burger-btn"></button>
+    <main class="page__content" data-scroll-container>
+      <header class="header" id="header"><a class="header__logo" href="/" id="logo-link"><img class="header__logo-img" src="img/logo.svg" alt="Britlex"></a><button class="header__mobile-burger-btn" type="button" id="mobile-menu-burger-btn"></button>
         <nav class="main-nav" id="main-nav">
           <div class="main-nav__wrapper"><button class="main-nav__close-btn" type="button" id="mobile-menu-close-btn"></button>
             <ul class="main-nav__list">
@@ -57,43 +57,43 @@
           </div>
         </nav>
       </header>
-      <section class="home" id="home">
+      <section class="home" id="home" data-scroll-section>
         <div class="home__text-wrapper">
-          <h1 class="home__title">Learn Any&nbsp;Foreign Language</h1>
+          <h1 class="home__title" data-scroll data-scroll-repeat data-scroll-call="toggleBackToTop">Learn Any&nbsp;Foreign Language</h1>
           <p class="home__text">With our teachers who write a&nbsp;program for each student, you will&nbsp;be able to&nbsp;make your first sketch after the&nbsp;first lesson.</p><a class="btn btn--home" href="#">Get started</a>
-        </div><img class="home__img" src="img/home.svg" alt="Britlex. Learn Any Foreign Language">
+        </div><img class="home__img" src="img/home.svg" alt="Britlex. Learn Any Foreign Language" data-scroll>
       </section>
-      <section class="skills" id="skills">
+      <section class="skills" id="skills" data-scroll-section>
         <h2 class="skills__title">Skills</h2>
         <div class="skills__items-wrapper">
           <div class="skills-item"><img class="skills-item__img skills-item__img--speaking" src="img/skills01.svg" alt="Brtitlex. Speaking">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Speaking</h3>
               <p class="skills-item__text">Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</p>
-              <p class="skills-item__text">Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.</p><a class="btn btn--skills"> Learn more</a>
+              <p class="skills-item__text">Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.</p><a class="btn btn--skills">Learn more</a>
             </div>
           </div>
           <div class="skills-item"><img class="skills-item__img skills-item__img--writing" src="img/skills02.svg" alt="Brtitlex. Writing">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Writing</h3>
-              <p class="skills-item__text">One of the most important and extensive areas of natural science, the science that studies substances, also their composition</p><a class="btn btn--skills"> Learn more</a>
+              <p class="skills-item__text">One of the most important and extensive areas of natural science, the science that studies substances, also their composition</p><a class="btn btn--skills">Learn more</a>
             </div>
           </div>
           <div class="skills-item"><img class="skills-item__img skills-item__img--reading" src="img/skills03.svg" alt="Brtitlex. Reading">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Reading</h3>
-              <p class="skills-item__text">perception and response actions of the user resulting from the use and/or upcoming use of the product, system or service</p><a class="btn btn--skills"> Learn more</a>
+              <p class="skills-item__text">perception and response actions of the user resulting from the use and/or upcoming use of the product, system or service</p><a class="btn btn--skills">Learn more</a>
             </div>
           </div>
           <div class="skills-item"><img class="skills-item__img skills-item__img--listening" src="img/skills04.svg" alt="Brtitlex. Listening">
             <div class="skills-item__text-wrapper">
               <h3 class="skills-item__title">Listening</h3>
-              <p class="skills-item__text">Here you can find activities to practise your listening skills. Listening will help you to improve your understanding</p><a class="btn btn--skills"> Learn more</a>
+              <p class="skills-item__text">Here you can find activities to practise your listening skills. Listening will help you to improve your understanding</p><a class="btn btn--skills">Learn more</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="about" id="about">
+      <section class="about" id="about" data-scroll-section>
         <h2 class="about__title">About Us</h2><img class="about__img" src="img/about.svg" alt="Britlex. About">
         <div class="about__text-wrapper">
           <p class="about__text">The model offers a framework for discussing problems related to the user's experience, as well as possible ways and means of solving them. Application development begins at the top level (strategy), where the future software product is described quite abstractly from the point of view of the expectations of both users and the customer.</p>
@@ -113,7 +113,7 @@
           </div>
         </div>
       </section>
-      <section class="pricing" id="pricing">
+      <section class="pricing" id="pricing" data-scroll-section>
         <h2 class="pricing__title">Pricing</h2>
         <div class="pricing__items-wrapper">
           <div class="pricing-item"><img class="pricing-item__img pricing-item__img--self-study" src="img/pricing01.svg" alt="Britlex. Self-study online course">
@@ -133,11 +133,11 @@
           </div>
         </div>
       </section>
-      <section class="contacts" id="contacts"><img class="contacts__img" src="img/contacts.svg" alt="Briitlex. Contact Us">
+      <section class="contacts" id="contacts" data-scroll-section><img class="contacts__img" src="img/contacts.svg" alt="Briitlex. Contact Us">
         <h2 class="contacts__title">Contact Us</h2>
         <div class="contacts__text-wrapper">
           <p class="contacts__text">Discover your current English level by taking our free online English test.Sign up to our newsletter for learning tips and free resource</p>
-          <form class="contacts__form" method="POST" action="" id="subscribe-form"><input class="contacts__form-input" type="email" placeholder="Enter Your E-mail"><button class="btn btn--contacts-form-subscribe" type="submit">Subscribe</button></form>
+          <form class="contacts__form" id="subscribe-form" method="POST" action=""><input class="contacts__form-input" type="email" placeholder="Enter Your E-mail"><button class="btn btn--contacts-form-subscribe" type="submit">Subscribe</button></form>
         </div>
       </section>
     </main>
